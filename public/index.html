@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Go SMART City</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <meta
+      name="title"
+      content="'Go to SMART City' - spend time with fun and communication for the benefit of society"
+    />
+    <meta
+      name="description"
+      content="A two-day online smart city prototyping marathon. Students, teachers and enthusiasts all over the world are invited to participate."
+    />
+    <meta
+      name="keywords"
+      content="Hackathon, SMART City, event, programming, fun, education"
+    />
+    <meta name="author" content="Kuzmuk Danila" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta
+      property="og:image"
+      content="https://wiki.developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <img class="logo-img" src="images/logo.png" />
+      <nav class="menu">
+        <ul>
+          <li class="current"><a href="#about"> About the event</a></li>
+          <li><a href="#where"> Where?</a></li>
+          <li><a href="#organizing"> Organizing committe</a></li>
+          <li><a href="#contact"> Contact us</a></li>
+          <li><a href="#join"> How to join</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content" id="scrollContenet">
+      <h1>Hackathon "Go to SMART City"<a name="about"></a></h1>
+      <h2>About the event</h2>
+      <p>
+        Katherine Mansfield, an outstanding English short-story writer of the
+        20th century, was born in New Zealand in 1888 and died in 1923. She is
+        the author of a number of excellent short stories which deal with human
+        nature and psychology. At the age of eighteen she decided to become a
+        professional writer. Her first short stories appeared in Melbourne in
+        1907, but literary fame came to her in London after the publication of a
+        collection of short stories called "In a German Pension". Katherine
+        Mansfield took a great interest in Russian literature, particularly in
+        the works of Chekhov. In fact, she considered herself to be a pupil of
+        the great Russian writer.<a name="where"></a>
+      </p>
+      <h2>Where?</h2>
+      <p>
+        Rosemary Fell was not exactly beautiful. She was young, brilliant,
+        extremely modern, well dressed and amazingly well read in the newest of
+        the new books. Rosemary had been married two years, and her husband was
+        very fond of her. They were rich, really rich, not just comfortably
+        well-off, so if Rosemary wanted to shop, she would go to Paris as you
+        and I would go to Bond Street. One winter afternoon she went into a
+        small shop to look at a little box which the shopman had been keeping
+        for her. He had shown it to nobody as yet so that she might be the first
+        to see it. <a name="organizing"></a>
+      </p>
+      <h2>Organizing committe</h2>
+      <p>
+        "A cup of tea?" There was something simple, sincere in that voice; it
+        couldn't be the voice of a beggar. "Then have you no money at all?"
+        asked Rosemary. "None, madam", came the answer. "How unusual!" Rosemary
+        looked at the girl closer. And suddenly it seemed to her such an
+        adventure. Supposing she took the girl home? Supposing she did one of
+        those things she was always reading about or seeing on the stage? What
+        would happen? It would be thrilling. And she heard herself saying
+        afterwards to the amazement of her friends: "I simply took her home with
+        me." And she stepped forward and said to the girl beside her: "Come home
+        to tea with me."<a name="contact"></a>
+      </p>
+      <h2>Contact us</h2>
+      <p>
+        "You absurd creature!" said Rosemary, and she went out of the library,
+        but not back to her bedroom. She went to her writing-room and sat down
+        at her desk. Pretty! Absolutely lovely! Her heart beat like a heavy
+        bell. She opened a drawer, took out five pound notes, looked at them,
+        put two back, and holding the three in her hand, went back to her
+        bedroom.<a name="join"></a>
+      </p>
+      <h2>How to join</h2>
+      <div class="how-to-join">
+        <p class="how-to-join-text">
+          To take part in the hackathon, you must fill out the form below
+        </p>
+        <button id="myBtn">Відкрити віконце</button>
+      </div>
+      <img class="form-image" src="images/fromLogo.png" />
+      <div class="calculator">
+        <h2>Підрахунок площі конусу</h2>
+        <form>
+          <label>
+            R - радіус конусу<br />
+            <input class="join-input" id="Rk" type="number" /> </label
+          ><br />
+          <p class="error" id="R-is-null">
+            Значення радіусу не може бути порожнім
+          </p>
+          <p class="error" id="R-smaller-null">
+            Значення радіусу не може бути менше 0
+          </p>
+          <label>
+            l - твірна конусу<br />
+            <input class="join-input" id="lk" type="number" /> </label
+          ><br />
+          <p class="error" id="l-is-null">
+            Значення твірної не може бути порожнім
+          </p>
+          <p class="error" id="l-smaller-null">
+            Значення твірної не може бути менше 0
+          </p>
+          <input id="added-info" type="checkbox" /><label
+            >Додаткова інформація</label
+          ><br />
+          <p id="info">
+            Для підрахунку площі конусу використовується формула:<br />S =
+            πR<sub>2</sub> + πRl
+          </p>
+          <input
+            class="from-button"
+            id="calculateBtn"
+            type="submit"
+            value="Підрахувати"
+          />
+          <input
+            class="from-button"
+            id="calculateBtnClear"
+            type="reset"
+            value="Очистить"
+          />
+        </form>
+      </div>
+
+      <div
+        id="red-block"
+        style="
+          width: 50px;
+          height: 50px;
+          background-color: red;
+          margin-top: 0px;
+        "
+      ></div>
+
+      <div class="regex-task">
+        <h2>Task 11</h2>
+        <p id="task-11-1-input">Привет рябь неделя день час ролЬ тест</p>
+        <p id="task-11-1-output"></p>
+
+        <p id="task-11-2-input">
+          192.168.1.1 255.192.168.100 255.255.255.1 255,656.546.1 255.п56.153.1
+        </p>
+        <p id="task-11-2-output"></p>
+        <input
+          id="task-11-3-input"
+          class="join-input"
+          type="text"
+          required
+          placeholder="xx/xx/xxxx"
+        />
+        <br />
+        <input
+          id="task-11-4-input"
+          class="join-input"
+          type="email"
+          required
+          placeholder="xxxx@ukr.net"
+        />
+
+        <br /><button id="task12-btn" class="from-button">Замовлення</button>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close"><i class="far fa-times-circle"></i></span>
+        
+        <form>
+          Name: <input id = "reg-name" type="text" name="name"><span id = "reg-name-error" style="color: red;"></span>
+          <br><br>
+          Password: <input id = "reg-pass"  type="text" name="password"><span id = "reg-pass-error" style="color: red;"></span>
+          <br><br>
+          E-mail: <input id = "reg-email" type="email" name="email"><span id = "reg-email-error" style="color: red;"></span>
+          <br><br>
+          Gender:
+          <input onclick="changeGender(this.value)" type="radio" name="gender" value="female" checked>Female
+          <input onclick="changeGender(this.value)" type="radio" name="gender" value="male">Male
+          <input onclick="changeGender(this.value)" type="radio" name="gender" value="other">Other
+          <br><br>
+          <input type="submit" name="submit" value="Submit" id = "registerbtn">  
+        </form>
+        <p id = "register-output"></p>
+      </div>
+    </div>
+    <div id="task-12-form" class="modal">
+      <div class="modal-content" id="task12-content-modal">
+        <span class="close" id="task12-close"
+          ><i class="far fa-times-circle"></i
+        ></span>
+        <h2>Заказ</h2>
+        <form
+          onsubmit="alert('Замовлення успішно додане');document.getElementById('task-12-form').style.display = 'none'; return false;"
+        >
+          <ul class="container-form">
+            <li>
+              <label>Имя</label>
+              <br />
+              <input
+                class="join-input task12-input"
+                type="text"
+                required
+                placeholder="Ivanov"
+              />
+            </li>
+            <li>
+              <label>E-mail</label><br /><input
+                class="join-input task12-input"
+                type="email"
+                required
+                placeholder="Ivan@ssu.edu.ua"
+              />
+            </li>
+            <li>
+              <label>Номер телефона</label><br /><input
+                class="join-input task12-input"
+                name="email"
+                type="text"
+                required
+                placeholder="+380XXXXXXXXX"
+                pattern="^\+380\d{3}\d{2}\d{2}\d{2}$"
+              />
+            </li>
+            <li>
+              <label>Время доставки</label><br />
+
+              <input
+                class="join-input task12-input"
+                id="task-12-time"
+                type="time"
+                required
+              />
+            </li>
+            <li>
+              <label>Город</label><br />
+              <select
+                name="city"
+                class="join-input city-selector task12-input"
+                id="task-12-city"
+              >
+                <option disabled>Выберите город</option>
+                <option value="50">Киев($50)</option>
+                <option value="20">Полтава($20)</option>
+                <option value="25">Сумы($25)</option>
+                <option value="40">Харьков($40)</option>
+              </select>
+            </li>
+            <li>
+              <label>Доставка</label><br />
+              <input
+                class="button-radio-t12 task12-input"
+                id="task-12-samo"
+                name="task12"
+                type="radio"
+                value="yorself"
+                checked
+              />Самовывоз($0)
+              <br />
+              <input
+                class="button-radio-t12 task12-input"
+                id="task-12-pod"
+                name="task12"
+                type="radio"
+                value="pod"
+              />К подъезду($30)
+              <br />
+              <input
+                class="button-radio-t12 task12-input"
+                id="task-12-kvat"
+                name="task12"
+                type="radio"
+                value="kvat"
+              />К квартире ($35)
+              <br />
+            </li>
+
+            <li>
+              <label>Сеты</label><br />
+              <input
+                class="button-radio task12-input"
+                name="ready"
+                type="checkbox"
+                id="task-12-s1"
+              />Сет Макі роли($40)
+              <br />
+              <input
+                class="button-radio task12-input"
+                name="ready"
+                type="checkbox"
+                id="task-12-s2"
+              />Сет Сирний($50)
+              <br />
+              <input
+                class="button-radio task12-input"
+                name="ready"
+                type="checkbox"
+                id="task-12-s3"
+              />Сет Вугор мікс($60)<br />
+              <input
+                class="button-radio task12-input"
+                name="ready"
+                type="checkbox"
+                id="task-12-s4"
+              />Сет Креветковий($70)<br />
+              <input
+                class="button-radio task12-input"
+                name="ready"
+                type="checkbox"
+                id="task-12-s5"
+              />Сет Асорті($80)
+              <br />
+            </li>
+
+            <li>
+              <label>Литров напитка</label><br />
+              <input
+                class="join-input task12-input"
+                id="task-12-drink-val"
+                type="text"
+                name="drink"
+                value="0"
+                placeholder="0.0"
+              />
+              <br />
+              <p id="task-12-sum"></p>
+            </li>
+            <li>
+              <label>Оплата</label><br />
+              <select
+                name="city"
+                class="join-input city-selector task12-input"
+                id="task-12-oplata"
+              >
+                <option disabled>Выберите вид оплати</option>
+                <option value="1">Наличние</option>
+                <option value="0.9">Картой(скидка 10%)</option>
+              </select>
+              <label>Дисконт</label><br />
+              <input
+                class="button-radio task12-input"
+                name="ready"
+                type="checkbox"
+                id="task-12-kk"
+              />Клбная карта(-5%)
+              <br />
+              <br />
+            </li>
+
+            <li>
+              <input class="from-button" type="reset" value="Очистить" />
+              <input class="from-button" type="submit" value="Отправить" />
+            </li>
+          </ul>
+        </form>
+        <form name="”forma1”" action="”form1.php”">
+          <p id="”info”">Введіть значення:</p>
+          <input id="”name”" type="”text”" name="”pole1”" />
+        </form>
+      </div>
+    </div>
+    <script src="js/modal.js"></script>
+    <script src="js/Task9.js"></script>
+    <script src="js/Task10.js"></script>
+    <script src="js/Task11.js"></script>
+    <script src="js/Task12.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+
+  <footer class="container">
+    <p>Copyright 2020. Kuzmuk Danila. All Rights Reserved.</p>
+  </footer>
+</html>
